@@ -1,0 +1,30 @@
+.form {
+  width: 280px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+span {
+  color: red;
+}
+
+.button {
+  border-radius: 4px;
+  border: 1px solid gray;
+  cursor: pointer;
+  padding: 5px;
+  height: 30px;
+}
