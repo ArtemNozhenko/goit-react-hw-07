@@ -48,7 +48,7 @@ const slice = createSlice({
       })
       .addCase(deleteContact.fulfilled, (state, action) => {
         state.items = state.items.filter(
-          (contact) => contact.id !== action.payload
+          (contact) => contact.id !== action.payload.id
         );
         state.loading = false;
       })
@@ -64,7 +64,7 @@ export const selectContacts = (state) =>
 export const selectLoading = (state) =>
   state.contacts.loading;
 export const selectError = (state) => state.contacts.error;
-export const selectVisibleContacts = createSelector(
+export const selectFilteredContacts = createSelector(
   [selectContacts, selectNameFilter],
   (contacts, filter) => {
     return contacts.filter((contact) =>
